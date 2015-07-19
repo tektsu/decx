@@ -8,6 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		AA8B0FE81B5C0BA700337E53 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8B0FE71B5C0BA700337E53 /* main.swift */; };
+		AA8B10051B5C250700337E53 /* CommandArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8B0FF01B5C250700337E53 /* CommandArguments.swift */; };
+		AA8B10061B5C250700337E53 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8B0FF11B5C250700337E53 /* Options.swift */; };
+		AA8B10071B5C250700337E53 /* RawArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8B0FF21B5C250700337E53 /* RawArguments.swift */; };
+		AA8B10081B5C250700337E53 /* CLI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8B0FF41B5C250700337E53 /* CLI.swift */; };
+		AA8B10091B5C250700337E53 /* CommandSignature.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8B0FF51B5C250700337E53 /* CommandSignature.swift */; };
+		AA8B100A1B5C250700337E53 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8B0FF61B5C250700337E53 /* Extensions.swift */; };
+		AA8B100B1B5C250700337E53 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8B0FF71B5C250700337E53 /* Router.swift */; };
+		AA8B100C1B5C250700337E53 /* ChainableCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8B0FFA1B5C250700337E53 /* ChainableCommand.swift */; };
+		AA8B100D1B5C250700337E53 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8B0FFB1B5C250700337E53 /* Command.swift */; };
+		AA8B100E1B5C250700337E53 /* LightweightCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8B0FFC1B5C250700337E53 /* LightweightCommand.swift */; };
+		AA8B100F1B5C250700337E53 /* HelpCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8B0FFE1B5C250700337E53 /* HelpCommand.swift */; };
+		AA8B10101B5C250700337E53 /* VersionCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8B0FFF1B5C250700337E53 /* VersionCommand.swift */; };
+		AA8B10111B5C250700337E53 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8B10011B5C250700337E53 /* Input.swift */; };
+		AA8B10121B5C250700337E53 /* Output.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8B10021B5C250700337E53 /* Output.swift */; };
+		AA8B10131B5C250700337E53 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8B10041B5C250700337E53 /* Result.swift */; };
+		AA8B10151B5C2E0B00337E53 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8B10141B5C2E0B00337E53 /* Entry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +41,22 @@
 /* Begin PBXFileReference section */
 		AA8B0FE41B5C0BA700337E53 /* decx */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = decx; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA8B0FE71B5C0BA700337E53 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		AA8B0FF01B5C250700337E53 /* CommandArguments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandArguments.swift; sourceTree = "<group>"; };
+		AA8B0FF11B5C250700337E53 /* Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
+		AA8B0FF21B5C250700337E53 /* RawArguments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RawArguments.swift; sourceTree = "<group>"; };
+		AA8B0FF41B5C250700337E53 /* CLI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLI.swift; sourceTree = "<group>"; };
+		AA8B0FF51B5C250700337E53 /* CommandSignature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandSignature.swift; sourceTree = "<group>"; };
+		AA8B0FF61B5C250700337E53 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		AA8B0FF71B5C250700337E53 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		AA8B0FFA1B5C250700337E53 /* ChainableCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChainableCommand.swift; sourceTree = "<group>"; };
+		AA8B0FFB1B5C250700337E53 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		AA8B0FFC1B5C250700337E53 /* LightweightCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightweightCommand.swift; sourceTree = "<group>"; };
+		AA8B0FFE1B5C250700337E53 /* HelpCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpCommand.swift; sourceTree = "<group>"; };
+		AA8B0FFF1B5C250700337E53 /* VersionCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionCommand.swift; sourceTree = "<group>"; };
+		AA8B10011B5C250700337E53 /* Input.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
+		AA8B10021B5C250700337E53 /* Output.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Output.swift; sourceTree = "<group>"; };
+		AA8B10041B5C250700337E53 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		AA8B10141B5C2E0B00337E53 /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +90,89 @@
 			isa = PBXGroup;
 			children = (
 				AA8B0FE71B5C0BA700337E53 /* main.swift */,
+				AA8B10141B5C2E0B00337E53 /* Entry.swift */,
+				AA8B0FEE1B5C250700337E53 /* SwiftCLI */,
 			);
 			path = decx;
+			sourceTree = "<group>";
+		};
+		AA8B0FEE1B5C250700337E53 /* SwiftCLI */ = {
+			isa = PBXGroup;
+			children = (
+				AA8B0FEF1B5C250700337E53 /* Arguments */,
+				AA8B0FF31B5C250700337E53 /* CLI */,
+				AA8B0FF81B5C250700337E53 /* Commands */,
+				AA8B10001B5C250700337E53 /* IO */,
+				AA8B10031B5C250700337E53 /* Result */,
+			);
+			name = SwiftCLI;
+			path = SwiftCLI/SwiftCLI;
+			sourceTree = SOURCE_ROOT;
+		};
+		AA8B0FEF1B5C250700337E53 /* Arguments */ = {
+			isa = PBXGroup;
+			children = (
+				AA8B0FF01B5C250700337E53 /* CommandArguments.swift */,
+				AA8B0FF11B5C250700337E53 /* Options.swift */,
+				AA8B0FF21B5C250700337E53 /* RawArguments.swift */,
+			);
+			path = Arguments;
+			sourceTree = "<group>";
+		};
+		AA8B0FF31B5C250700337E53 /* CLI */ = {
+			isa = PBXGroup;
+			children = (
+				AA8B0FF41B5C250700337E53 /* CLI.swift */,
+				AA8B0FF51B5C250700337E53 /* CommandSignature.swift */,
+				AA8B0FF61B5C250700337E53 /* Extensions.swift */,
+				AA8B0FF71B5C250700337E53 /* Router.swift */,
+			);
+			path = CLI;
+			sourceTree = "<group>";
+		};
+		AA8B0FF81B5C250700337E53 /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				AA8B0FF91B5C250700337E53 /* Base */,
+				AA8B0FFD1B5C250700337E53 /* Special */,
+			);
+			path = Commands;
+			sourceTree = "<group>";
+		};
+		AA8B0FF91B5C250700337E53 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				AA8B0FFA1B5C250700337E53 /* ChainableCommand.swift */,
+				AA8B0FFB1B5C250700337E53 /* Command.swift */,
+				AA8B0FFC1B5C250700337E53 /* LightweightCommand.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		AA8B0FFD1B5C250700337E53 /* Special */ = {
+			isa = PBXGroup;
+			children = (
+				AA8B0FFE1B5C250700337E53 /* HelpCommand.swift */,
+				AA8B0FFF1B5C250700337E53 /* VersionCommand.swift */,
+			);
+			path = Special;
+			sourceTree = "<group>";
+		};
+		AA8B10001B5C250700337E53 /* IO */ = {
+			isa = PBXGroup;
+			children = (
+				AA8B10011B5C250700337E53 /* Input.swift */,
+				AA8B10021B5C250700337E53 /* Output.swift */,
+			);
+			path = IO;
+			sourceTree = "<group>";
+		};
+		AA8B10031B5C250700337E53 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				AA8B10041B5C250700337E53 /* Result.swift */,
+			);
+			path = Result;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +231,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA8B10111B5C250700337E53 /* Input.swift in Sources */,
+				AA8B10151B5C2E0B00337E53 /* Entry.swift in Sources */,
+				AA8B100F1B5C250700337E53 /* HelpCommand.swift in Sources */,
+				AA8B100B1B5C250700337E53 /* Router.swift in Sources */,
+				AA8B100E1B5C250700337E53 /* LightweightCommand.swift in Sources */,
+				AA8B10091B5C250700337E53 /* CommandSignature.swift in Sources */,
+				AA8B10051B5C250700337E53 /* CommandArguments.swift in Sources */,
+				AA8B10131B5C250700337E53 /* Result.swift in Sources */,
+				AA8B100D1B5C250700337E53 /* Command.swift in Sources */,
+				AA8B10071B5C250700337E53 /* RawArguments.swift in Sources */,
+				AA8B10101B5C250700337E53 /* VersionCommand.swift in Sources */,
+				AA8B10081B5C250700337E53 /* CLI.swift in Sources */,
+				AA8B10121B5C250700337E53 /* Output.swift in Sources */,
+				AA8B10061B5C250700337E53 /* Options.swift in Sources */,
+				AA8B100C1B5C250700337E53 /* ChainableCommand.swift in Sources */,
 				AA8B0FE81B5C0BA700337E53 /* main.swift in Sources */,
+				AA8B100A1B5C250700337E53 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +365,7 @@
 				AA8B0FED1B5C0BA700337E53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
