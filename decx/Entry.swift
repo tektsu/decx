@@ -12,7 +12,7 @@ class Entry {
   private var name: String = ""
   private var color: String = ""
   private var type: String = ""
-  private var supertype: String = ""
+  private var supertype: String? = nil
 
   init(card: AnyObject) {
     setName(card)
@@ -73,7 +73,7 @@ class Entry {
     return self.type
   }
 
-  func getSupertype() -> String {
+  func getSupertype() -> String? {
     return self.supertype
   }
 }

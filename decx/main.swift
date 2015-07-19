@@ -14,25 +14,37 @@ struct Opts {
   static let allCardsFile = "~/Development/decx/AllCards-x.json"
 }
 
-var error: NSError?
-let fileContent = NSString(contentsOfFile: Opts.allCardsFile.stringByExpandingTildeInPath, encoding: NSUTF8StringEncoding, error: nil)
-if (fileContent == nil) {
-  println("Unable to read file: " + Opts.allCardsFile)
-  exit(0)
-}
-//println(fileContent)
-
-var jsonError: NSError?
-let json = NSJSONSerialization.JSONObjectWithData(fileContent!.dataUsingEncoding(NSUTF8StringEncoding)!, options: nil, error: &jsonError) as! NSDictionary
-if (jsonError != nil) {
-  println("Error parsing JSON")
-  exit(0)
+func readFile(path: String) -> NSString {
+  var error: NSError?
+  let fullPath = path.stringByExpandingTildeInPath
+  let fileContent = NSString(contentsOfFile: fullPath, encoding: NSUTF8StringEncoding, error: nil)
+  if (fileContent == nil) {
+    println("Unable to read file: " + fullPath)
+    exit(0)
+  }
+  return fileContent!;
 }
 
-//println(json["Air Elemental"])
+func parseJson(data: NSString) -> NSDictionary {
+  var jsonError: NSError?
+  let json = NSJSONSerialization.JSONObjectWithData(fileContent.dataUsingEncoding(NSUTF8StringEncoding)!, options: nil, error: &jsonError) as! NSDictionary
+  if (jsonError != nil) {
+    println("Error parsing JSON")
+    exit(0)
+  }
+  return json;
+}
+
+let fileContent = readFile(Opts.allCardsFile)
+let json = parseJson(fileContent)
 
 for key in json.allKeys {
   //println(json.objectForKey(key)!)
   let entry = Entry(card: json.objectForKey(key)!)
-  println(entry.getName() + ", " + entry.getColor() + ", " + entry.getType() + ", " + entry.getSupertype())
+  var out = entry.getName() + ", " + entry.getColor() + ", " + entry.getType()
+  if (entry.getSupertype() != nil) {
+    out = out + ", " + entry.getSupertype()!
+  }
+  println(out)
 }
+
