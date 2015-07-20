@@ -9,17 +9,29 @@
 import Foundation
 
 class EntryList {
-  var lists: NSDictionary = NSDictionary()
+  var lists = [String: [String]]()
 
   private func generateKey(entry: Entry) -> String {
-    var key = entry.getName() + ", " + entry.getColor() + ", " + entry.getType()
+    var key = entry.getColor() + "-" + entry.getType()
     if (entry.getSupertype() != nil) {
-      key = key + ", " + entry.getSupertype()!
+      key = key + "-" + entry.getSupertype()!
     }
     return key
   }
 
-  init(entry: Entry) {
+  func addEntry(entry: Entry) {
+    let listName = self.generateKey(entry)
+    if (lists[listName] == nil) {
+      lists[listName] = [String]()
+    }
+    lists[listName]!.append(entry.getName())
+  }
 
+  func getListNames() -> [String] {
+    var listNames = [String]()
+    for (listName, _) in lists {
+      listNames.append(listName)
+    }
+    return listNames
   }
 }

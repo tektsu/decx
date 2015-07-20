@@ -27,7 +27,7 @@ func readFile(path: String) -> NSString {
 
 func parseJson(data: NSString) -> NSDictionary {
   var jsonError: NSError?
-  let json = NSJSONSerialization.JSONObjectWithData(fileContent.dataUsingEncoding(NSUTF8StringEncoding)!, options: nil, error: &jsonError) as! NSDictionary
+  let json = NSJSONSerialization.JSONObjectWithData(data.dataUsingEncoding(NSUTF8StringEncoding)!, options: nil, error: &jsonError) as! NSDictionary
   if (jsonError != nil) {
     println("Error parsing JSON")
     exit(0)
@@ -35,16 +35,22 @@ func parseJson(data: NSString) -> NSDictionary {
   return json;
 }
 
+var lists = EntryList();
+
 let fileContent = readFile(Opts.allCardsFile)
 let json = parseJson(fileContent)
 
 for key in json.allKeys {
   //println(json.objectForKey(key)!)
   let entry = Entry(card: json.objectForKey(key)!)
+  lists.addEntry(entry)
   var out = entry.getName() + ", " + entry.getColor() + ", " + entry.getType()
   if (entry.getSupertype() != nil) {
     out = out + ", " + entry.getSupertype()!
   }
-  println(out)
+  //println(out)
 }
+
+println(lists.getListNames())
+
 
