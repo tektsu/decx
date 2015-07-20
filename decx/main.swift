@@ -41,16 +41,16 @@ let fileContent = readFile(Opts.allCardsFile)
 let json = parseJson(fileContent)
 
 for key in json.allKeys {
-  //println(json.objectForKey(key)!)
   let entry = Entry(card: json.objectForKey(key)!)
   lists.addEntry(entry)
-  var out = entry.getName() + ", " + entry.getColor() + ", " + entry.getType()
-  if (entry.getSupertype() != nil) {
-    out = out + ", " + entry.getSupertype()!
-  }
+  //var out = entry.getName() + ", " + entry.getColor() + ", " + entry.getType()
+  //if (entry.getSupertype() != nil) {
+  //  out = out + ", " + entry.getSupertype()!
+  //}
   //println(out)
 }
 
 println(lists.getListNames())
+println(lists.getListForName("Green-Tribal"))
 
 
