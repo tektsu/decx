@@ -34,4 +34,10 @@ class EntryList {
     }
     return listNames
   }
+
+  func getListForName(listName: String) -> [String] {
+    return lists[listName]!.sorted({ (first, second) -> Bool in
+      return first.lowercaseString < second.lowercaseString
+    })
+  }
 }
