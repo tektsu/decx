@@ -42,10 +42,25 @@ class GenerateLists {
   init(pathToFile: String) {
     self.allCardsFile = pathToFile
   }
+
+  private func outputListsToScreen(lists: EntryList) {
+    let listNames = lists.getListNames()
+    for listName in listNames {
+      println("\n[" + listName + "]")
+      let cardNames = lists.getListForName(listName)
+      for cardName in cardNames {
+        println(cardName)
+      }
+    }
+  }
+
+  private func outputLists(lists: EntryList) {
+    outputListsToScreen(lists)
+  }
   
   func execute() {
     
-    var lists = EntryList();
+    var cardLists = EntryList();
 
     let reader = AllCardsFileReader(pathToFile: allCardsFile)
     if (!reader.worked()) {
@@ -56,15 +71,11 @@ class GenerateLists {
 
     for name in json.allKeys {
       let entry = Entry(card: json.objectForKey(name)!)
-      lists.addEntry(entry)
+      cardLists.addEntry(entry)
     }
 
-    let listNames = lists.getListNames()
+    outputLists(cardLists)
 
-    println(lists.getListForName("Green-Tribal"))
-    for listName in listNames {
-      println(listName)
-    }
   }
   
 }
