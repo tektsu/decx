@@ -35,4 +35,5 @@ Carthage/Build
 .DS_Store
 
 AllCards-x.json
+mtgcards-*.txt
 
