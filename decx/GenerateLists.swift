@@ -10,7 +10,6 @@ import Foundation
 
 class GenerateListsCommand: Command {
 
-  private var allCardsFile: String = "AllCards-x-json"
   private var writeListsToFiles = false
   private var outputDirectory = "."
 
@@ -23,9 +22,6 @@ class GenerateListsCommand: Command {
   }
 
   override func handleOptions() {
-    onKeys(["-a", "--all-cards-file"], usage: "path to all-cards json file", valueSignature: "allCards") {(key, value) in
-      self.allCardsFile = value;
-    }
     onKeys(["-o", "--output-directory"], usage: "path to file output directory", valueSignature: "outputDirectory") {(key, value) in
       var checkValidation = NSFileManager.defaultManager()
       if (!checkValidation.fileExistsAtPath(value)) {
@@ -38,7 +34,7 @@ class GenerateListsCommand: Command {
   }
 
   override func execute() -> ExecutionResult {
-    var listApp = GenerateLists(pathToFile: self.allCardsFile, writeListsToFiles: self.writeListsToFiles, outputDirectory: self.outputDirectory)
+    var listApp = GenerateLists(writeListsToFiles: self.writeListsToFiles, outputDirectory: self.outputDirectory)
     listApp.execute()
     return success()
   }
@@ -47,12 +43,11 @@ class GenerateListsCommand: Command {
 
 class GenerateLists {
 
-  private var allCardsFile = ""
   private var writeListsToFiles = false;
   private var outputDirectory = ""
+  private var rc = RcDirectory.sharedRc
 
-  init(pathToFile: String, writeListsToFiles: Bool, outputDirectory: String) {
-    self.allCardsFile = pathToFile
+  init(writeListsToFiles: Bool, outputDirectory: String) {
     self.writeListsToFiles = writeListsToFiles
     self.outputDirectory = outputDirectory
   }
@@ -91,7 +86,7 @@ class GenerateLists {
     
     var cardLists = EntryList();
 
-    let reader = AllCardsFileReader(pathToFile: allCardsFile)
+    let reader = AllCardsFileReader(pathToFile: rc.getPathToAllCards())
     if (!reader.worked()) {
       println(reader.getError())
       exit(0)
