@@ -11,7 +11,7 @@ import Foundation
 class Entry {
   private var name: String = ""
   private var color: String = ""
-  private var type: String = ""
+  private var type: String? = nil
   private var supertype: String? = nil
 
   init(card: AnyObject) {
@@ -50,7 +50,7 @@ class Entry {
       return
     }
     let types = (card["types"] as! NSArray) as Array
-    self.type = types[0] as! String
+    self.type = types[0] as? String
   }
 
   private func setSupertype(card: AnyObject) {
@@ -58,7 +58,7 @@ class Entry {
       return
     }
     let supertypes = (card["supertypes"] as! NSArray) as Array
-    self.supertype = supertypes[0] as! String
+    self.supertype = supertypes[0] as? String
   }
 
   func getName() -> String {
@@ -69,7 +69,7 @@ class Entry {
     return self.color
   }
 
-  func getType() -> String {
+  func getType() -> String? {
     return self.type
   }
 

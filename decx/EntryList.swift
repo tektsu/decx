@@ -12,7 +12,10 @@ class EntryList {
   var lists = [String: [String]]()
 
   private func generateKey(entry: Entry) -> String {
-    var key = entry.getColor() + "-" + entry.getType()
+    var key = entry.getColor()
+    if (entry.getType() != nil) {
+      key = key + "-" + entry.getType()!
+    }
     if (entry.getSupertype() != nil) {
       key = key + "-" + entry.getSupertype()!
     }

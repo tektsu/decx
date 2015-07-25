@@ -59,8 +59,12 @@ class GenerateLists {
       lists.addEntry(entry)
     }
 
-    //println(lists.getListNames())
+    let listNames = lists.getListNames()
+
     println(lists.getListForName("Green-Tribal"))
+    for listName in listNames {
+      println(listName)
+    }
   }
   
 }
