@@ -95,6 +95,14 @@
 			name = "File Readers";
 			sourceTree = "<group>";
 		};
+		AA47C8261B63D3EA00FBF53D /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				AA47C81F1B631F5200FBF53D /* GenerateLists.swift */,
+			);
+			name = Commands;
+			sourceTree = "<group>";
+		};
 		AA8B0FDB1B5C0BA600337E53 = {
 			isa = PBXGroup;
 			children = (
@@ -118,7 +126,7 @@
 				AA8B0FE71B5C0BA700337E53 /* main.swift */,
 				AA8B10141B5C2E0B00337E53 /* Entry.swift */,
 				AA8B10231B5C66FB00337E53 /* EntryList.swift */,
-				AA47C81F1B631F5200FBF53D /* GenerateLists.swift */,
+				AA47C8261B63D3EA00FBF53D /* Commands */,
 				AA47C8231B63C76500FBF53D /* File Readers */,
 				AA8B0FEE1B5C250700337E53 /* SwiftCLI */,
 			);
