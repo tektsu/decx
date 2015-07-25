@@ -28,7 +28,7 @@ class GenerateListsCommand: Command {
 
   override func execute() -> ExecutionResult {
     println(self.allCardsFile)
-    var listApp = GenerateLists(path: self.allCardsFile)
+    var listApp = GenerateLists(pathToFile: self.allCardsFile)
     listApp.execute()
     return success()
   }
@@ -39,8 +39,8 @@ class GenerateLists {
 
   private var allCardsFile = ""
 
-  init(path: String) {
-    self.allCardsFile = path
+  init(pathToFile: String) {
+    self.allCardsFile = pathToFile
   }
   
   func execute() {
