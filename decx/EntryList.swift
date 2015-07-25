@@ -35,7 +35,9 @@ class EntryList {
     for (listName, _) in lists {
       listNames.append(listName)
     }
-    return listNames
+    return listNames.sorted({(first, second) -> Bool in
+      return first.lowercaseString < second.lowercaseString
+    })
   }
 
   func getListForName(listName: String) -> [String] {
