@@ -39,27 +39,6 @@ class GenerateLists {
 
   private var allCardsFile = ""
 
-  private func readFile(path: String) -> NSString {
-    var error: NSError?
-    let fullPath = allCardsFile.stringByExpandingTildeInPath
-    let fileContent = NSString(contentsOfFile: fullPath, encoding: NSUTF8StringEncoding, error: nil)
-    if (fileContent == nil) {
-      println("Unable to read file: " + fullPath)
-      exit(0)
-    }
-    return fileContent!;
-  }
-
-  private func parseJson(data: NSString) -> NSDictionary {
-    var jsonError: NSError?
-    let json = NSJSONSerialization.JSONObjectWithData(data.dataUsingEncoding(NSUTF8StringEncoding)!, options: nil, error: &jsonError) as! NSDictionary
-    if (jsonError != nil) {
-      println("Error parsing JSON")
-      exit(0)
-    }
-    return json;
-  }
-
   init(path: String) {
     self.allCardsFile = path
   }
@@ -68,8 +47,12 @@ class GenerateLists {
     
     var lists = EntryList();
 
-    let fileContent = readFile(self.allCardsFile)
-    let json = parseJson(fileContent)
+    let reader = AllCardsFileReader(pathToFile: allCardsFile)
+    if (!reader.worked()) {
+      println(reader.getError())
+      exit(0)
+    }
+    let json = reader.getJson()
 
     for name in json.allKeys {
       let entry = Entry(card: json.objectForKey(name)!)

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		AA47C8201B631F5200FBF53D /* GenerateLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47C81F1B631F5200FBF53D /* GenerateLists.swift */; };
+		AA47C8221B63C72100FBF53D /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47C8211B63C72100FBF53D /* FileReader.swift */; };
+		AA47C8251B63CD2C00FBF53D /* AllCardsFileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47C8241B63CD2C00FBF53D /* AllCardsFileReader.swift */; };
 		AA8B0FE81B5C0BA700337E53 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8B0FE71B5C0BA700337E53 /* main.swift */; };
 		AA8B10051B5C250700337E53 /* CommandArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8B0FF01B5C250700337E53 /* CommandArguments.swift */; };
 		AA8B10061B5C250700337E53 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8B0FF11B5C250700337E53 /* Options.swift */; };
@@ -42,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		AA47C81F1B631F5200FBF53D /* GenerateLists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerateLists.swift; sourceTree = "<group>"; };
+		AA47C8211B63C72100FBF53D /* FileReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
+		AA47C8241B63CD2C00FBF53D /* AllCardsFileReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllCardsFileReader.swift; sourceTree = "<group>"; };
 		AA8B0FE41B5C0BA700337E53 /* decx */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = decx; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA8B0FE71B5C0BA700337E53 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		AA8B0FF01B5C250700337E53 /* CommandArguments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandArguments.swift; sourceTree = "<group>"; };
@@ -82,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA47C8231B63C76500FBF53D /* File Readers */ = {
+			isa = PBXGroup;
+			children = (
+				AA47C8211B63C72100FBF53D /* FileReader.swift */,
+				AA47C8241B63CD2C00FBF53D /* AllCardsFileReader.swift */,
+			);
+			name = "File Readers";
+			sourceTree = "<group>";
+		};
 		AA8B0FDB1B5C0BA600337E53 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +119,7 @@
 				AA8B10141B5C2E0B00337E53 /* Entry.swift */,
 				AA8B10231B5C66FB00337E53 /* EntryList.swift */,
 				AA47C81F1B631F5200FBF53D /* GenerateLists.swift */,
+				AA47C8231B63C76500FBF53D /* File Readers */,
 				AA8B0FEE1B5C250700337E53 /* SwiftCLI */,
 			);
 			path = decx;
@@ -279,10 +293,12 @@
 			files = (
 				AA8B10111B5C250700337E53 /* Input.swift in Sources */,
 				AA8B10151B5C2E0B00337E53 /* Entry.swift in Sources */,
+				AA47C8251B63CD2C00FBF53D /* AllCardsFileReader.swift in Sources */,
 				AA47C8201B631F5200FBF53D /* GenerateLists.swift in Sources */,
 				AA8B10241B5C66FB00337E53 /* EntryList.swift in Sources */,
 				AA8B100F1B5C250700337E53 /* HelpCommand.swift in Sources */,
 				AA8B100B1B5C250700337E53 /* Router.swift in Sources */,
+				AA47C8221B63C72100FBF53D /* FileReader.swift in Sources */,
 				AA8B100E1B5C250700337E53 /* LightweightCommand.swift in Sources */,
 				AA8B10091B5C250700337E53 /* CommandSignature.swift in Sources */,
 				AA8B10051B5C250700337E53 /* CommandArguments.swift in Sources */,
