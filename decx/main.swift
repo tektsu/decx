@@ -35,22 +35,32 @@ func parseJson(data: NSString) -> NSDictionary {
   return json;
 }
 
-var lists = EntryList();
+func generateLists() {
 
-let fileContent = readFile(Opts.allCardsFile)
-let json = parseJson(fileContent)
+  var lists = EntryList();
 
-for key in json.allKeys {
-  let entry = Entry(card: json.objectForKey(key)!)
-  lists.addEntry(entry)
-  //var out = entry.getName() + ", " + entry.getColor() + ", " + entry.getType()
-  //if (entry.getSupertype() != nil) {
-  //  out = out + ", " + entry.getSupertype()!
-  //}
-  //println(out)
+  let fileContent = readFile(Opts.allCardsFile)
+  let json = parseJson(fileContent)
+
+  for name in json.allKeys {
+    let entry = Entry(card: json.objectForKey(name)!)
+    lists.addEntry(entry)
+  }
+
+  println(lists.getListNames())
+  println(lists.getListForName("Green-Tribal"))
 }
 
-println(lists.getListNames())
-println(lists.getListForName("Green-Tribal"))
+CLI.setup(
+  name: "decx",
+  version: "0.1.0",
+  description: "MTG Card Operations"
+)
+CLI.registerChainableCommand(commandName: "generate_lists")
+  .withExecutionBlock {(arguments, options) in
+    generateLists()
+    return success()
+}
+CLI.go()
 
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA47C8201B631F5200FBF53D /* GenerateLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47C81F1B631F5200FBF53D /* GenerateLists.swift */; };
 		AA8B0FE81B5C0BA700337E53 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8B0FE71B5C0BA700337E53 /* main.swift */; };
 		AA8B10051B5C250700337E53 /* CommandArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8B0FF01B5C250700337E53 /* CommandArguments.swift */; };
 		AA8B10061B5C250700337E53 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8B0FF11B5C250700337E53 /* Options.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AA47C81F1B631F5200FBF53D /* GenerateLists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerateLists.swift; sourceTree = "<group>"; };
 		AA8B0FE41B5C0BA700337E53 /* decx */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = decx; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA8B0FE71B5C0BA700337E53 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		AA8B0FF01B5C250700337E53 /* CommandArguments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandArguments.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				AA8B0FE71B5C0BA700337E53 /* main.swift */,
 				AA8B10141B5C2E0B00337E53 /* Entry.swift */,
 				AA8B10231B5C66FB00337E53 /* EntryList.swift */,
+				AA47C81F1B631F5200FBF53D /* GenerateLists.swift */,
 				AA8B0FEE1B5C250700337E53 /* SwiftCLI */,
 			);
 			path = decx;
@@ -276,6 +279,7 @@
 			files = (
 				AA8B10111B5C250700337E53 /* Input.swift in Sources */,
 				AA8B10151B5C2E0B00337E53 /* Entry.swift in Sources */,
+				AA47C8201B631F5200FBF53D /* GenerateLists.swift in Sources */,
 				AA8B10241B5C66FB00337E53 /* EntryList.swift in Sources */,
 				AA8B100F1B5C250700337E53 /* HelpCommand.swift in Sources */,
 				AA8B100B1B5C250700337E53 /* Router.swift in Sources */,
@@ -457,6 +461,7 @@
 				AA8B10221B5C5EC400337E53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
