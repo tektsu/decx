@@ -11,11 +11,24 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-  @IBOutlet weak var window: NSWindow!
-
+  var mainWindowController: MainWindowController?
+  var cardListWindowController: CardListWindowController?
 
   func applicationDidFinishLaunching(aNotification: NSNotification) {
-    // Insert code here to initialize your application
+    let mainWindowController = MainWindowController()
+    self.mainWindowController = mainWindowController
+    self.mainWindowController!.showWindow(self)
+  }
+
+  @IBAction func viewCardList(sender: AnyObject?) {
+    if (cardListWindowController == nil) {
+      // Create a window controller
+      let cardListWindowController = CardListWindowController()
+      self.cardListWindowController = cardListWindowController
+    }
+
+    // Put the window of the window controller on screen
+    self.cardListWindowController!.showWindow(self)
   }
 
   func applicationWillTerminate(aNotification: NSNotification) {
@@ -61,7 +74,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       if !shouldFail && (error == nil) {
           coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
           let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("decx.storedata")
-          if coordinator!.addPersistentStoreWithType(NSXMLStoreType, configuration: nil, URL: url, options: nil, error: &error) == nil {
+        //if coordinator!.addPersistentStoreWithType(NSXMLStoreType, configuration: nil, URL: url, options: nil, error: &error) == nil {
+          if coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil, error: &error) == nil {
               coordinator = nil
           }
       }
