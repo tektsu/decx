@@ -21,10 +21,11 @@
 		AA2C1FC91B7FF4A80051A22A /* AllCardsFileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2C1FC81B7FF4A80051A22A /* AllCardsFileReader.swift */; };
 		AA2C1FCA1B7FF4A80051A22A /* AllCardsFileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2C1FC81B7FF4A80051A22A /* AllCardsFileReader.swift */; };
 		AA3855BD1B811FA200284FD2 /* JsonFileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3855BC1B811FA200284FD2 /* JsonFileReader.swift */; };
-		AA56C9651B9223AB000FB8FA /* Color_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA56C9641B9223AB000FB8FA /* Color_Extension.swift */; };
-		AA56C9671B922499000FB8FA /* Set_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA56C9661B922499000FB8FA /* Set_Extension.swift */; };
-		AA56C9691B9224AA000FB8FA /* Subtype_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA56C9681B9224AA000FB8FA /* Subtype_Extension.swift */; };
-		AA56C96B1B9224BA000FB8FA /* Type_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA56C96A1B9224BA000FB8FA /* Type_Extension.swift */; };
+		AA56C99D1B926907000FB8FA /* Color_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA56C9991B926907000FB8FA /* Color_Extension.swift */; };
+		AA56C99E1B926907000FB8FA /* Set_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA56C99A1B926907000FB8FA /* Set_Extension.swift */; };
+		AA56C99F1B926907000FB8FA /* Subtype_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA56C99B1B926907000FB8FA /* Subtype_Extension.swift */; };
+		AA56C9A01B926907000FB8FA /* Type_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA56C99C1B926907000FB8FA /* Type_Extension.swift */; };
+		AA56C9A21B926A1F000FB8FA /* Card_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA56C9A11B926A1F000FB8FA /* Card_Extension.swift */; };
 		AAFA025A1B8A400D00EF2DF8 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFA02581B8A400D00EF2DF8 /* MainWindowController.swift */; };
 		AAFA025B1B8A400D00EF2DF8 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAFA02591B8A400D00EF2DF8 /* MainWindowController.xib */; };
 		AAFA025F1B8A493D00EF2DF8 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFA025E1B8A493D00EF2DF8 /* Card.swift */; };
@@ -33,7 +34,6 @@
 		AAFA02651B8A4CA400EF2DF8 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFA02621B8A4CA400EF2DF8 /* Type.swift */; };
 		AAFA02671B8A623A00EF2DF8 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFA02661B8A623A00EF2DF8 /* Set.swift */; };
 		AAFA026B1B8A74A900EF2DF8 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFA026A1B8A74A900EF2DF8 /* DataStore.swift */; };
-		AAFA026F1B8AB48400EF2DF8 /* Card_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFA026E1B8AB48400EF2DF8 /* Card_Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,10 +63,11 @@
 		AA2C1FC51B7FF4920051A22A /* FileReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
 		AA2C1FC81B7FF4A80051A22A /* AllCardsFileReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllCardsFileReader.swift; sourceTree = "<group>"; };
 		AA3855BC1B811FA200284FD2 /* JsonFileReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonFileReader.swift; sourceTree = "<group>"; };
-		AA56C9641B9223AB000FB8FA /* Color_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color_Extension.swift; sourceTree = "<group>"; };
-		AA56C9661B922499000FB8FA /* Set_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Set_Extension.swift; sourceTree = "<group>"; };
-		AA56C9681B9224AA000FB8FA /* Subtype_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subtype_Extension.swift; sourceTree = "<group>"; };
-		AA56C96A1B9224BA000FB8FA /* Type_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Type_Extension.swift; sourceTree = "<group>"; };
+		AA56C9991B926907000FB8FA /* Color_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Color_Extension.swift; path = decx/Color_Extension.swift; sourceTree = "<group>"; };
+		AA56C99A1B926907000FB8FA /* Set_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Set_Extension.swift; path = decx/Set_Extension.swift; sourceTree = "<group>"; };
+		AA56C99B1B926907000FB8FA /* Subtype_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Subtype_Extension.swift; path = decx/Subtype_Extension.swift; sourceTree = "<group>"; };
+		AA56C99C1B926907000FB8FA /* Type_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Type_Extension.swift; path = decx/Type_Extension.swift; sourceTree = "<group>"; };
+		AA56C9A11B926A1F000FB8FA /* Card_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Card_Extension.swift; path = decx/Card_Extension.swift; sourceTree = "<group>"; };
 		AAFA02581B8A400D00EF2DF8 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		AAFA02591B8A400D00EF2DF8 /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
 		AAFA025E1B8A493D00EF2DF8 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Card.swift; path = decx/Card.swift; sourceTree = "<group>"; };
@@ -75,7 +76,6 @@
 		AAFA02621B8A4CA400EF2DF8 /* Type.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Type.swift; path = decx/Type.swift; sourceTree = "<group>"; };
 		AAFA02661B8A623A00EF2DF8 /* Set.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Set.swift; path = decx/Set.swift; sourceTree = "<group>"; };
 		AAFA026A1B8A74A900EF2DF8 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
-		AAFA026E1B8AB48400EF2DF8 /* Card_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card_Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,15 +174,15 @@
 			children = (
 				AA2C1F7A1B7F991B0051A22A /* decx.xcdatamodeld */,
 				AAFA025E1B8A493D00EF2DF8 /* Card.swift */,
-				AAFA026E1B8AB48400EF2DF8 /* Card_Extension.swift */,
+				AA56C9A11B926A1F000FB8FA /* Card_Extension.swift */,
 				AAFA02611B8A4CA400EF2DF8 /* Color.swift */,
-				AA56C9641B9223AB000FB8FA /* Color_Extension.swift */,
+				AA56C9991B926907000FB8FA /* Color_Extension.swift */,
 				AAFA02661B8A623A00EF2DF8 /* Set.swift */,
-				AA56C9661B922499000FB8FA /* Set_Extension.swift */,
+				AA56C99A1B926907000FB8FA /* Set_Extension.swift */,
 				AAFA02601B8A4CA400EF2DF8 /* Subtype.swift */,
-				AA56C9681B9224AA000FB8FA /* Subtype_Extension.swift */,
+				AA56C99B1B926907000FB8FA /* Subtype_Extension.swift */,
 				AAFA02621B8A4CA400EF2DF8 /* Type.swift */,
-				AA56C96A1B9224BA000FB8FA /* Type_Extension.swift */,
+				AA56C99C1B926907000FB8FA /* Type_Extension.swift */,
 			);
 			name = Models;
 			path = ..;
@@ -291,21 +291,21 @@
 			files = (
 				AAFA02631B8A4CA400EF2DF8 /* Subtype.swift in Sources */,
 				AA2C1FC61B7FF4920051A22A /* FileReader.swift in Sources */,
-				AA56C9671B922499000FB8FA /* Set_Extension.swift in Sources */,
+				AA56C99E1B926907000FB8FA /* Set_Extension.swift in Sources */,
 				AA2C1FC21B7FD6D20051A22A /* Entry.swift in Sources */,
 				AA2C1FC91B7FF4A80051A22A /* AllCardsFileReader.swift in Sources */,
-				AA56C96B1B9224BA000FB8FA /* Type_Extension.swift in Sources */,
+				AA56C9A01B926907000FB8FA /* Type_Extension.swift in Sources */,
 				AA3855BD1B811FA200284FD2 /* JsonFileReader.swift in Sources */,
-				AAFA026F1B8AB48400EF2DF8 /* Card_Extension.swift in Sources */,
 				AAFA02641B8A4CA400EF2DF8 /* Color.swift in Sources */,
-				AA56C9651B9223AB000FB8FA /* Color_Extension.swift in Sources */,
+				AA56C99D1B926907000FB8FA /* Color_Extension.swift in Sources */,
+				AA56C9A21B926A1F000FB8FA /* Card_Extension.swift in Sources */,
 				AAFA025A1B8A400D00EF2DF8 /* MainWindowController.swift in Sources */,
 				AAFA02651B8A4CA400EF2DF8 /* Type.swift in Sources */,
 				AA2C1FC41B7FD6E40051A22A /* EntryList.swift in Sources */,
 				AA2C1F791B7F991A0051A22A /* AppDelegate.swift in Sources */,
 				AAFA02671B8A623A00EF2DF8 /* Set.swift in Sources */,
 				AAFA025F1B8A493D00EF2DF8 /* Card.swift in Sources */,
-				AA56C9691B9224AA000FB8FA /* Subtype_Extension.swift in Sources */,
+				AA56C99F1B926907000FB8FA /* Subtype_Extension.swift in Sources */,
 				AA2C1F7C1B7F991B0051A22A /* decx.xcdatamodeld in Sources */,
 				AAFA026B1B8A74A900EF2DF8 /* DataStore.swift in Sources */,
 				AA2C1F971B7F99B00051A22A /* CardListWindowController.swift in Sources */,
