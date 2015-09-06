@@ -16,7 +16,8 @@ class MainWindowController : NSWindowController {
 
   override func windowDidLoad() {
     super.windowDidLoad()
-    var dataStore = DataStore.sharedInstance
-    dataStore.loadData()
+    //var dataStore = DataStore.sharedInstance
+    //dataStore.loadData()
+    var dataStore = DataStoreSQL.sharedInstance
   }
 }
