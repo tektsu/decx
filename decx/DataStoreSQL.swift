@@ -76,6 +76,10 @@ class DataStoreSQL {
 
   }
 
+  func getConnection() -> SQLite.Database? {
+    return connection
+  }
+
   private func clearErrors() {
     error = false
     errorMessages.removeAll()

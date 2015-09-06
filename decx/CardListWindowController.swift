@@ -19,12 +19,13 @@ class CardListWindowController: NSWindowController {
     return "CardListWindowController"
   }
 
-  private func outputListsToScreen(lists: EntryList) {
+  private func outputListsToScreen(lists: [String:[String:Bool]]) {
     clear()
-    let listNames = lists.getListNames()
+    let listNames = Array(lists.keys).sorted(<)
     for listName in listNames {
+      println(listName)
       var textToAdd = "\n[\(listName)]\n"
-      let cardNames = lists.getListForName(listName)
+      let cardNames = Array(lists[listName]!.keys).sorted(<)
       for cardName in cardNames {
         textToAdd += "\(cardName)\n"
       }
@@ -32,24 +33,72 @@ class CardListWindowController: NSWindowController {
     }
   }
 
-  private func outputLists(lists: EntryList) {
+  private func outputLists(lists: [String:[String:Bool]]) {
     outputListsToScreen(lists)
   }
-  
+
+  // Generate a type name based on the type components we care about
+  private func getNormalizedCardType(type: String) -> String {
+    var listName = ""
+    var typeArray = type.componentsSeparatedByString(" ")
+    var hyphen = false
+    for component in typeArray {
+      if component == "" {
+        continue
+      }
+      if component == "\u{2014}" {
+        hyphen = true
+        continue
+      }
+      var validComponent: String? = nil
+      if hyphen {
+        // Use only these subtypes
+        if component == "Aura" || component == "Equipment" {
+          validComponent = component
+        }
+      }
+      else {
+        if component == "Summon" {
+          validComponent = "Creature"
+        }
+        else if component == "Interrupt" {
+          validComponent = "Instant"
+        }
+        // Ignore these supertypes
+        else if component == "Legendary" || component == "Snow" || component == "World" || component == "Ongoing" {
+        }
+        else {
+          validComponent = component
+        }
+      }
+      if let name = validComponent {
+        listName += " \(name)"
+      }
+    }
+    return listName
+  }
+
   override func windowDidLoad() {
 
-    var cardLists = EntryList()
+    let dataStore = DataStoreSQL.sharedInstance
+    let db = dataStore.getConnection()!
+    let tableCards = db["cards"]
+    let cardName = dataStore.cardName
+    let cardColor = dataStore.cardColor
+    let cardType = dataStore.cardType
+    var cardLists = [String:[String:Bool]]()
 
-    let reader = AllCardsFileReader(pathToFile: "/Users/steve/Development/decx/AllCards-x.json".stringByExpandingTildeInPath)
-    if (!reader.worked()) {
-      appendToDisplay(reader.getError())
-      return
-    }
-    let json = reader.getJson()
+    for entry in tableCards.select(cardName, cardColor, cardType).order(cardName) {
+      var listName: String = entry[cardColor]
+      if let type: String = entry[cardType] {
+        listName += getNormalizedCardType(type)
+      }
+      //println("\(listName): \(entry[cardName])")
 
-    for name in json.allKeys {
-      let entry = Entry(card: json.objectForKey(name)!)
-      cardLists.addEntry(entry)
+      if cardLists[listName] == nil {
+        cardLists[listName] = [String: Bool]()
+      }
+      cardLists[listName]![entry[cardName]] = true
     }
 
     outputLists(cardLists)
