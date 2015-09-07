@@ -1,23 +1,22 @@
 //
-//  MainWindowController.swift
+//  CardDatabaseWindowController.swift
 //  decx
 //
-//  Created by Steve Baker on 8/16/15.
+//  Created by Steve Baker on 9/7/15.
 //  Copyright (c) 2015 Steve Baker. All rights reserved.
 //
 
 import Cocoa
 
-class MainWindowController : NSWindowController {
+class CardDatabaseWindowController: NSWindowController {
 
   override var windowNibName: String? {
-    return "MainWindowController"
+    return "CardDatabaseWindowController"
   }
 
   override func windowDidLoad() {
     super.windowDidLoad()
-    //var dataStore = DataStore.sharedInstance
-    //dataStore.loadData()
     var dataStore = DataStoreSQL.sharedInstance
   }
+    
 }

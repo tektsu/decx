@@ -11,13 +11,13 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-  var mainWindowController: MainWindowController?
+  var cardDatabaseWindowController: CardDatabaseWindowController?
   var cardListWindowController: CardListWindowController?
 
   func applicationDidFinishLaunching(aNotification: NSNotification) {
-    let mainWindowController = MainWindowController()
-    self.mainWindowController = mainWindowController
-    self.mainWindowController!.showWindow(self)
+    let cardDatabaseWindowController = CardDatabaseWindowController()
+    self.cardDatabaseWindowController = cardDatabaseWindowController
+    self.cardDatabaseWindowController!.showWindow(self)
   }
 
   @IBAction func viewCardList(sender: AnyObject?) {
